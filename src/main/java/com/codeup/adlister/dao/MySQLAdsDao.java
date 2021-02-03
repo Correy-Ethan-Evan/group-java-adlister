@@ -3,6 +3,7 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
+import java.applet.Applet;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -71,4 +72,17 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
+    public Ad viewAd() {
+        try {
+            String selectAd = "SELECT(id, title, description) FROM ads";
+//            String selectAd = "SELECT * FROM ads";
+            PreparedStatement stmt = connection.prepareStatement(selectAd);
+            ResultSet rs = stmt.executeQuery();
+            return extractAd(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ad.", e);
+        }
+    }
+
 }
