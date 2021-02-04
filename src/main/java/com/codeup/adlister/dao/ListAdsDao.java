@@ -27,7 +27,7 @@ public class ListAdsDao implements Ads {
         return ad.getId();
     }
 
-    public Ad viewAd() {
+    public Ad viewAd(long id) {
         if (ads == null) {
             ads = generateAds();
         }

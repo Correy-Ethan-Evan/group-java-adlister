@@ -16,7 +16,7 @@
         <div class="col-md-6">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
-            <button><c:redirect url = "/view-ad"/>View Ad${ad.id}</button>
+            <a class="btn btn-success" href="${pageContext.request.contextPath}ads/view-ad">View Ad</a>
         </div>
     </c:forEach>
 </div>
