@@ -16,7 +16,7 @@
         <div class="col-md-6">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
-            <a class="btn btn-success" href="${pageContext.request.contextPath}ads/view-ad">View Ad</a>
+            <a class="btn btn-success" href="${pageContext.request.contextPath}ads/view-ad?id=<c:out value="${ad.id}"/>">View Ad</a>
         </div>
     </c:forEach>
 </div>
