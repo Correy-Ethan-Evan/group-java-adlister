@@ -12,13 +12,9 @@
 <div class="container">
 
 
-    <%--&lt;%&ndash;title, description, priority, risk, payout&ndash;%&gt;--%>
         <div class="col-md-6">
             <h2>Title: ${ad.title}</h2>
             <p>Description: ${ad.description}</p>
-    <%--        <p>${ad.priority}</p>--%>
-    <%--        <p>${ad.risk}</p>--%>
-    <%--        <p>${ad.payout}</p>--%>
         </div>
 
 
