@@ -75,7 +75,7 @@ public class MySQLAdsDao implements Ads {
 
     public Ad viewAd(long id) {
         try {
-            String selectAd = "SELECT(id, title, description) FROM ads WHERE id = ? LIMIT 1";
+            String selectAd = "SELECT id, user_id, title, description FROM ads WHERE id = ? LIMIT 1";
             PreparedStatement stmt = connection.prepareStatement(selectAd);
             stmt.setLong(1, id);
             ResultSet rs = stmt.executeQuery();

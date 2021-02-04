@@ -13,20 +13,14 @@
 
 
     <%--&lt;%&ndash;title, description, priority, risk, payout&ndash;%&gt;--%>
-    <%--    <div class="col-md-6">--%>
-    <%--        <h2>Title: ${ad.title}</h2>--%>
-    <%--        <p>Description: ${ad.description}</p>--%>
-    <%--&lt;%&ndash;        <p>${ad.priority}</p>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;        <p>${ad.risk}</p>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;        <p>${ad.payout}</p>&ndash;%&gt;--%>
-    <%--    </div>--%>
-
-    <c:forEach var="ad" items="ad">
         <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
+            <h2>Title: ${ad.title}</h2>
+            <p>Description: ${ad.description}</p>
+    <%--        <p>${ad.priority}</p>--%>
+    <%--        <p>${ad.risk}</p>--%>
+    <%--        <p>${ad.payout}</p>--%>
         </div>
-    </c:forEach>
+
 
     <%--comment section--%>
 
