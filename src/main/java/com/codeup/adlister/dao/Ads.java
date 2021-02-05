@@ -11,4 +11,6 @@ public interface Ads {
     Long insert(Ad ad);
     // get an individual ad
     Ad viewAd(long id);
+
+    boolean delete(long id);
 }
