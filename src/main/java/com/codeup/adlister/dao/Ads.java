@@ -13,10 +13,13 @@ public interface Ads {
     // get an individual ad
     Ad viewAd(long id);
 
+    boolean delete(long id);
+
     // get all ads from a user
     List<Ad> userAds(User user);
 
 
     List<Ad> searchForAds(String searched_ad);
+
 
 }

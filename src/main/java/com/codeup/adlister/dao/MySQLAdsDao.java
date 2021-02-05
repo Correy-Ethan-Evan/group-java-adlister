@@ -101,6 +101,9 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public boolean delete(long id) {
+        return false;
+
     public List<Ad> userAds(User user) {
         PreparedStatement stmt = null;
         try {
@@ -111,6 +114,7 @@ public class MySQLAdsDao implements Ads {
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving user ads.", e);
         }
+
     }
 
 }
