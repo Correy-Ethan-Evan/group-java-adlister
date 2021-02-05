@@ -9,6 +9,11 @@
             <li><a href="/logout">Logout</a></li>
             <li><a href="/register">Register</a></li>
         </ul>
+        <form action="/ads" method="GET">
+            <label for="search"></label>
+            <input type="text" name="search" id="search" placeholder="">
+            <submit>Find</submit>
+        </form>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
