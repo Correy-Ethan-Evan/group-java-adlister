@@ -13,8 +13,8 @@
 
 
         <div class="col-md-6">
-            <h2>Title: ${ad.title}</h2>
-            <p>Description: ${ad.description}</p>
+            <h1>${ad.title}</h1>
+            <h4>${ad.description}</h4>
         </div>
 
 

@@ -15,8 +15,6 @@ public class ViewAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String idString = request.getParameter("id");
         long id = Long.parseLong(idString);
-//        long id = request.getAttribute("ad", DaoFactory.getAdsDao().viewAd().getId());
-//        Ad ad = DaoFactory.getAdsDao().viewAd(id);
 
         request.setAttribute("ad", DaoFactory.getAdsDao().viewAd(id));
         request.getRequestDispatcher("/WEB-INF/ads/ad.jsp").forward(request, response);
