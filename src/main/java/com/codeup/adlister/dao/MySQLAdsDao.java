@@ -102,8 +102,20 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public boolean delete(long id) {
-        return false;
+        try {
+            System.out.println(id);
+            String deleteQuery = "DELETE FROM ads WHERE id = " + id;
+            PreparedStatement stmt = connection.prepareStatement(deleteQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+            return true;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting an ad.", e);
+        }
+    }
 
+@Override
     public List<Ad> userAds(User user) {
         PreparedStatement stmt = null;
         try {
