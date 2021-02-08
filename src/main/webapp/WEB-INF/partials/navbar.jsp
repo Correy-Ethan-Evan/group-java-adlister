@@ -16,6 +16,7 @@
                     <input type="text" name="searched_ads" id="searched_ads" placeholder="">
                     <button class="btn btn-info my-2 my-sm-0" type="submit">Find</button>
                 </form></li>
+            <div class="nav navbar-nav navbar-right">
 
                 <c:choose>
 
@@ -23,6 +24,7 @@
 
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Register</a></li>
+
                 </c:when>
 
                 <c:otherwise>
@@ -35,6 +37,7 @@
             </c:choose>
         </ul>
     </div>
+
 </nav>
 
 
