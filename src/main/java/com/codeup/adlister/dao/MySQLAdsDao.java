@@ -80,7 +80,8 @@ public class MySQLAdsDao implements Ads {
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, searched_ad);
-            return createAdsFromResults(stmt.executeQuery());
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error finding a Ad by Title", e);
         }
@@ -103,6 +104,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public boolean delete(long id) {
         return false;
+    }
 
     public List<Ad> userAds(User user) {
         PreparedStatement stmt = null;

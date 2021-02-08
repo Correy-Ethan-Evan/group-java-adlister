@@ -10,20 +10,16 @@ import java.io.IOException;
 
 @WebServlet(name = "controllers.SearchAdServlet", urlPatterns = "/search_ads")
 public class SearchAdsServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (request.getSession().getAttribute("user") == null) {
-            response.sendRedirect("/profile");
-            return;
-        }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
         request.getRequestDispatcher("/WEB-INF/search_ads.jsp").forward(request, response);
     }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String searched_ad = request.getParameter("searched_ads");
-        if (searched_ad == null) {
-            response.sendRedirect("/search_ads");
-            return;
-        }
+        String searched_ad = request.getParameter("search_ads");
+
         request.setAttribute("searched_ads", DaoFactory.getAdsDao().searchForAds(searched_ad));
-        request.getRequestDispatcher("/WEB-INF/ads/searched.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/search_ads.jsp").forward(request, response);
     }
 }

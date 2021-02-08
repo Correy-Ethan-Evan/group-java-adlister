@@ -9,7 +9,13 @@
             <div class="navbar-header">
                 <a href="/ads" class="navbar-brand">Adlister</a>
             </div>
+
             <div class="nav navbar-nav navbar-right">
+                <li><form class="form-inline" action="/search_ads" method="POST">
+                    <label for="searched_ads"></label>
+                    <input type="text" name="searched_ads" id="searched_ads" placeholder="">
+                    <button class="btn btn-info my-2 my-sm-0" type="submit">Find</button>
+                </form></li>
 
                 <c:choose>
 
@@ -17,7 +23,6 @@
 
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Register</a></li>
-
                 </c:when>
 
                 <c:otherwise>
@@ -29,7 +34,7 @@
             </c:otherwise>
             </c:choose>
         </ul>
-
+    </div>
 </nav>
 
 
